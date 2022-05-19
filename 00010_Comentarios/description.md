@@ -4,7 +4,7 @@ Vamos a crear un artículo increíble :star_struck:, el mismo debe tener:
 - un párrafo `p` con `lorem ipsum`.
 - un título `h2` que diga `Comentarios`.
 - 5 comentarios, con lo siguiente:
-  - un título `h3` con el handle de la usuario (por ejemplo **@adalovelace**).
+  - un título `h3` con el handle del usuario (por ejemplo **@mariecurie**).
   - un `span` que diga: `Publicado hace 14 minutos` (cambiar el tiempo).
   - un párrafo `p` con `lorem ipsum`.
 
