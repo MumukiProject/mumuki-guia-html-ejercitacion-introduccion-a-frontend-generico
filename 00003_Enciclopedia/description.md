@@ -1,6 +1,6 @@
 Queremos armar nuestra propia enciclopedia con artículos de nuestro interés, la misma debe contener:
 
-* un título `h1` con el nombre del artículo (por ejemplo **Ada Lovelace**).
+* un título `h1` con el nombre del artículo (por ejemplo **Marie Curie**).
 * un párrafo `p` con la introducción o resumen del artículo.
 * 2 secciones con título `h2` (por ejemplo, **Biografía** y **Obra**)
 * debajo de cada título de sección, 2 subsecciones con título `h3` (por ejemplo, debajo de **Biografía**, incluir **Infancia** y **Adultez**)
