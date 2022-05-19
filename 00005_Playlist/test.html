@@ -1,0 +1,34 @@
+/*<tests#*/it("Se introdujo un título h1", () => {
+  document.getElementsByTagName("h1").length.should.eql(1);
+})
+
+it("Se introdujeron tres títulos h2", () => {
+  document.getElementsByTagName("h2").length.should.eql(3);
+})
+
+it("Se introdujeron tres párrafos p", () => {
+  document.getElementsByTagName("p").length.should.eql(3);
+})
+
+it("Se introdujeron seis elementos en línea span", () => {
+  document.getElementsByTagName("span").length.should.eql(6);
+})
+
+it("Se introdujeron tres títulos h3", () => {
+  document.getElementsByTagName("h3").length.should.eql(3);
+})
+
+it("Se introdujeron tres listas ordenadas", () => {
+  document.getElementsByTagName("ol").length.should.eql(3);
+})
+
+it("El título h1 dice Mis playlists", () => {
+document.querySelector('h1').should.have.trimmed.text("Mis playlist");
+})
+
+it("Los títulos h3 dicen Canciones", () =>{
+  document.querySelectorAll('h3')[0].should.have.trimmed.text("Canciones");
+  document.querySelectorAll('h3')[1].should.have.trimmed.text("Canciones");
+  document.querySelectorAll('h3')[2].should.have.trimmed.text("Canciones");
+})
+/*#tests>*/

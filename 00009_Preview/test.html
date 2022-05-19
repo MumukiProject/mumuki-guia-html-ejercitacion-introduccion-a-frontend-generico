@@ -1,0 +1,28 @@
+/*<tests#*/it("Se introdujo un título h1", () => {
+  document.getElementsByTagName("h1").length.should.eql(1);
+})
+
+it("Se introdujo una imagen", () => {
+  document.getElementsByTagName("img").length.should.eql(1);
+})
+
+it("El título h2 dice Elenco", () => {
+  document.querySelector("h2").should.have.trimmed.text("Elenco");
+})
+
+it("Se introdujeron dos etiquetas ul", () => {
+  document.querySelectorAll("ul").length.should.eql(2);
+})
+
+it("Se introdujeron seis etiquetas li", () => {
+  document.querySelectorAll("li").length.should.eql(6);
+})
+
+it("Hay un título h3 que dice Sinopsis",() => {
+  document.querySelectorAll("h3")[0].should.have.trimmed.text("Sinopsis")
+})
+
+it("Hay un título h3 que dice Géneros",() => {
+  document.querySelectorAll("h3")[1].should.have.trimmed.text("Géneros")
+})
+/*#tests>*/

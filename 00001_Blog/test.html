@@ -1,0 +1,11 @@
+/*<tests#*/it("Se introdujeron cinco etiquetas p", () => {
+  document.getElementsByTagName("p").length.should.eql(5);
+})
+
+it("Se introdujo una etiqueta h1", () => {
+  document.getElementsByTagName("h1").length.should.eql(1);
+})
+
+it("El título dice El mejor artículo del mundo", () => {
+document.querySelector('h1').should.have.trimmed.text("El mejor artículo del mundo");
+})/*#tests>*/
