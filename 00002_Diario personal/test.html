@@ -27,7 +27,7 @@ it("Hay una etiqueta h2 que dice Miércoles", () => {
   
   let esMiercoles = dia === "miércoles" || dia === "miercoles"
   
-  esMiercoles.should.be.true(`Se esperaba que el día sea Miércoles pero fue ${dia}`);
+  esMiercoles.should.eql(true, `Se esperaba que el día sea Miércoles pero fue ${dia}`);
 })
 
 
