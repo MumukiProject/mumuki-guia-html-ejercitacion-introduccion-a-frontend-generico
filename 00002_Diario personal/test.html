@@ -23,7 +23,7 @@ it("Hay una etiqueta h2 que dice Martes", () => {
 })
 
 it("Hay una etiqueta h2 que dice Miércoles", () => {
-  let dia = document.getElementsByTagName('h2')[2].innerText;
+  let dia = document.getElementsByTagName('h2')[2].textContent;
   
   let esMiercoles = dia === "Miércoles" || dia === "Miercoles"
   
