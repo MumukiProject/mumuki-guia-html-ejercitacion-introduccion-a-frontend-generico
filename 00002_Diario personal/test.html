@@ -43,8 +43,6 @@ it("Hay una etiqueta h2 que dice Jueves", () => {
   let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[3].textContent);
   
   dia.should.eql("jueves", `Se esperaba que el día sea Jueves pero fue ${dia}`);
-  
-  document.getElementsByTagName('h2')[3].should.have.trimmed.text("Jueves");
 })
 
 it("Hay una etiqueta h2 que dice Viernes", () => {
