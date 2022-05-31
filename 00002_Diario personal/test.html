@@ -21,11 +21,13 @@ it("Se introdujeron siete etiquetas p", () => {
 it("Hay una etiqueta h2 que dice Lunes", () => {
   let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[0].textContent);
   
-  dia.should.eql("lunes");
+  dia.should.eql("lunes", `Se esperaba que el día sea Lunes pero fue ${dia}`);
 })
 
 it("Hay una etiqueta h2 que dice Martes", () => {
-  document.getElementsByTagName('h2')[1].should.have.trimmed.text("Martes");
+  let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[1].textContent);
+  
+  dia.should.eql("martes", `Se esperaba que el día sea Martes pero fue ${dia}`);
 })
 
 it("Hay una etiqueta h2 que dice Miércoles", () => {
@@ -38,17 +40,31 @@ it("Hay una etiqueta h2 que dice Miércoles", () => {
 
 
 it("Hay una etiqueta h2 que dice Jueves", () => {
+  let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[3].textContent);
+  
+  dia.should.eql("jueves", `Se esperaba que el día sea Jueves pero fue ${dia}`);
+  
   document.getElementsByTagName('h2')[3].should.have.trimmed.text("Jueves");
 })
 
 it("Hay una etiqueta h2 que dice Viernes", () => {
-  document.getElementsByTagName('h2')[4].should.have.trimmed.text("Viernes");
+  
+  let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[4].textContent);
+  
+  dia.should.eql("viernes", `Se esperaba que el día sea Viernes pero fue ${dia}`);
 })
 
 it("Hay una etiqueta h2 que dice Sábado", () => {
-  document.getElementsByTagName('h2')[5].should.have.trimmed.text("Sábado");
+  
+  let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[5].textContent);
+  
+  let esSabado = dia === "sábado" || dia === "sabado"
+  
+  esSabado.should.eql(true, `Se esperaba que el día sea Sábado pero fue ${dia}`);
 })
 
 it("Hay una etiqueta h2 que dice Domingo", () => {
-  document.getElementsByTagName('h2')[6].should.have.trimmed.text("Domingo");
+  let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[6].textContent);
+  
+  dia.should.eql("domingo", `Se esperaba que el día sea Domingo pero fue ${dia}`);
 })/*#tests>*/
