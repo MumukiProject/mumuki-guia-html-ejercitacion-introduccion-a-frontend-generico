@@ -19,7 +19,9 @@ it("Se introdujeron siete etiquetas p", () => {
 })
 
 it("Hay una etiqueta h2 que dice Lunes", () => {
-  document.getElementsByTagName('h2')[0].should.have.trimmed.text("Lunes");
+  let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[0].textContent);
+  
+  dia.should.eql("lunes");
 })
 
 it("Hay una etiqueta h2 que dice Martes", () => {
