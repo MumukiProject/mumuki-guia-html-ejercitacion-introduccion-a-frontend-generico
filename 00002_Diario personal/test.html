@@ -2,7 +2,7 @@
   document.getElementsByTagName("h1").length.should.eql(1);
 })
 it("El título dice Mi diario", () => {
-document.querySelector('h1').should.have.trimmed.text("Mi diario");
+  document.querySelector('h1').should.have.trimmed.text("Mi diario");
 })
 
 
@@ -15,29 +15,34 @@ it("Se introdujeron siete etiquetas p", () => {
 })
 
 it("Hay una etiqueta h2 que dice Lunes", () => {
-document.getElementsByTagName('h2')[0].should.have.trimmed.text("Lunes");
+  document.getElementsByTagName('h2')[0].should.have.trimmed.text("Lunes");
 })
 
 it("Hay una etiqueta h2 que dice Martes", () => {
-document.getElementsByTagName('h2')[1].should.have.trimmed.text("Martes");
+  document.getElementsByTagName('h2')[1].should.have.trimmed.text("Martes");
 })
 
 it("Hay una etiqueta h2 que dice Miércoles", () => {
-document.getElementsByTagName('h2')[2].should.have.trimmed.text("Miércoles");
+  let dia = document.getElementsByTagName('h2')[2].innerText;
+  
+  let esMiercoles = dia === "Miércoles" || dia === "Miercoles"
+  
+  esMiercoles.should.be.true;
 })
 
+
 it("Hay una etiqueta h2 que dice Jueves", () => {
-document.getElementsByTagName('h2')[3].should.have.trimmed.text("Jueves");
+  document.getElementsByTagName('h2')[3].should.have.trimmed.text("Jueves");
 })
 
 it("Hay una etiqueta h2 que dice Viernes", () => {
-document.getElementsByTagName('h2')[4].should.have.trimmed.text("Viernes");
+  document.getElementsByTagName('h2')[4].should.have.trimmed.text("Viernes");
 })
 
 it("Hay una etiqueta h2 que dice Sábado", () => {
-document.getElementsByTagName('h2')[5].should.have.trimmed.text("Sábado");
+  document.getElementsByTagName('h2')[5].should.have.trimmed.text("Sábado");
 })
 
 it("Hay una etiqueta h2 que dice Domingo", () => {
-document.getElementsByTagName('h2')[6].should.have.trimmed.text("Domingo");
+  document.getElementsByTagName('h2')[6].should.have.trimmed.text("Domingo");
 })/*#tests>*/
