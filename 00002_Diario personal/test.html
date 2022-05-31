@@ -1,4 +1,8 @@
-/*<tests#*/it("Se introdujo un título h1", () => {
+/*<tests#*/function sinMayusculasNiEspacios(texto) {
+  return texto.toLowerCase().trim();
+}
+
+it("Se introdujo un título h1", () => {
   document.getElementsByTagName("h1").length.should.eql(1);
 })
 it("El título dice Mi diario", () => {
@@ -23,7 +27,7 @@ it("Hay una etiqueta h2 que dice Martes", () => {
 })
 
 it("Hay una etiqueta h2 que dice Miércoles", () => {
-  let dia = document.getElementsByTagName('h2')[2].textContent.toLowerCase().trim();
+  let dia = sinMayusculasNiEspacios(document.getElementsByTagName('h2')[2].textContent);
   
   let esMiercoles = dia === "miércoles" || dia === "miercoles"
   
