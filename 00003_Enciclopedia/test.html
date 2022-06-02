@@ -17,7 +17,7 @@ it("El artículo debe tener al menos dos apartados con título h3 por cada subt�
 it("El artículo debe tener al menos un párrafo por cada apartado y un párrafo para la introducción", () => {
   let cantidadDeApartados = document.getElementsByTagName("h3").length;
   
-  let cantidadDeParrafos = document.getElementsByTagName("h3 p").length;
+  let cantidadDeParrafos = document.getElementsByTagName("p").length;
   
   cantidadDeParrafos.should.be.greaterThanOrEqual(cantidadDeApartados + 1);
 })/*#tests>*/
