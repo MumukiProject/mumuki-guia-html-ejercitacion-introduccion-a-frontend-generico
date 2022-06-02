@@ -14,6 +14,14 @@ it("El artículo debe tener al menos dos apartados con título h3 por cada subt�
   cantidadDeApartados.should.be.greaterThanOrEqual(cantidadDeSubtitulos * 2);
 })
 
+it("BIS El artículo debe tener al menos dos apartados con título h3 por cada subtítulo", () => {
+  let subtitulos = document.getElementsByTagName("h2");
+  
+  for (let subtitulo of subtitulos) {
+    subtitulo.getElementsByTagName("h3").should.be.greaterThanOrEqual(2);
+  }
+})
+
 it("El artículo debe tener al menos un párrafo por cada apartado y un párrafo para la introducción", () => {
   let cantidadDeApartados = document.getElementsByTagName("h3").length;
   
