@@ -1,15 +1,23 @@
-/*<tests#*/it("Se introdujo un título h1", () => {
+/*<tests#*/it("El artículo debe tener un título h1", () => {
   document.getElementsByTagName("h1").length.should.eql(1);
 })
 
-it("Se introdujeron dos h2", () => {
-  document.getElementsByTagName("h2").length.should.eql(2);
+it("El artículo debe tener al menos dos subtítulos h2", () => {
+  document.getElementsByTagName("h2").length.should.be.greaterThanOrEqual(2);
 })
 
-it("Se introdujeron dos h3", () => {
-  document.getElementsByTagName("h3").length.should.be.greaterThanOrEqual(2);
+it("El artículo debe tener al menos dos apartados con título h3 por cada subtítulo", () => {
+  let cantidadDeSubtitulos = document.getElementsByTagName("h2").length;
+  
+  let cantidadDeApartados = document.getElementsByTagName("h3").length;
+  
+  cantidadDeApartados.should.be.greaterThanOrEqual(cantidadDeSubtitulos * 2);
 })
 
-it("Se introdujeron cinco etiquetas p", () => {
-  document.getElementsByTagName("p").length.should.eql(5);
+it("El artículo debe tener al menos un párrafo por cada apartado y un párrafo para la introducción", () => {
+  let cantidadDeApartados = document.getElementsByTagName("h3").length;
+  
+  let cantidadDeParrafos = document.getElementsByTagName("p").length;
+  
+  cantidadDeParrafos.should.be.greaterThanOrEqual(cantidadDeApartados + 1);
 })/*#tests>*/
