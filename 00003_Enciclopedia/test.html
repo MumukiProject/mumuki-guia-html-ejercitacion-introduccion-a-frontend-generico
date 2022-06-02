@@ -18,7 +18,7 @@ it("BIS El artículo debe tener al menos dos apartados con título h3 por cada s
   let subtitulos = document.getElementsByTagName("h2");
   
   for (let i = 0; i < subtitulos.length; i++) {
-    subtitulos[i].getElementsByTagName("h3").length.should.be.greaterThanOrEqual(2);
+    subtitulos[i].children.length.should.be.greaterThanOrEqual(2);
   }
 })
 
